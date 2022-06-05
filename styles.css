@@ -1,0 +1,86 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-color: #323238;
+	--secondary-color: #e5e5e5;
+	--primary-color-background: #e1e1e6;
+	--secondary-color-background: #02799d;
+
+	font-size: 62.5%;
+}
+
+*::selection {
+	color: none;
+	background: transparent;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+}
+
+button.hide {
+	display: none;
+}
+
+main {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	gap: 5rem;
+}
+
+.timer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.timer .time {
+	font-family: 'Roboto', sans-serif;
+	line-height: 16rem;
+	font-size: 12rem;
+	color: var(--primary-color);
+
+	cursor: default;
+}
+
+.timer .buttons {
+	display: flex;
+	justify-content: center;
+	gap: 4rem;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3.2rem;
+}
+
+.cards .card {
+	width: 13rem;
+	height: 14rem;
+	display: flex;
+	justify-content: center;
+
+	border-radius: 2.4rem;
+	background-color: var(--primary-color-background);
+}
+
+@media (min-width: 850px) {
+	main {
+		flex-direction: row;
+		gap: 10vw;
+	}
+}
