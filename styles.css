@@ -5,10 +5,11 @@
 }
 
 :root {
-	--primary-color: #323238;
-	--secondary-color: #e5e5e5;
-	--primary-color-background: #e1e1e6;
-	--secondary-color-background: #02799d;
+	--hue: 240;
+	--primary-color: hsl(var(--hue), 6%, 21%);
+	--secondary-color: hsl(0, 0%, 90%);
+	--primary-color-background: hsl(var(--hue), 9%, 89%);
+	--secondary-color-background: hsl(calc(var(--hue) - 46), 97%, 31%);
 
 	font-size: 62.5%;
 }
@@ -76,14 +77,19 @@ main {
 
 	border-radius: 2.4rem;
 	background-color: var(--primary-color-background);
+
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .cards .card.active {
 	background-color: var(--secondary-color-background);
+	box-shadow: hsla(var(--hue), 30%, 28%, 0.25) 0px 30px 60px -12px inset,
+		rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .cards .card.active path {
-	fill: var(--primary-color-background);
+	fill: var(--secondary-color);
 }
 
 @media (min-width: 850px) {
