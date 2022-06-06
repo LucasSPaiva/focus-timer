@@ -78,6 +78,14 @@ main {
 	background-color: var(--primary-color-background);
 }
 
+.cards .card.active {
+	background-color: var(--secondary-color-background);
+}
+
+.cards .card.active path {
+	fill: var(--primary-color-background);
+}
+
 @media (min-width: 850px) {
 	main {
 		flex-direction: row;
