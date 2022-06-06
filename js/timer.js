@@ -29,8 +29,6 @@ export function Timer({ minutesDisplay, secondsDisplay, resetControls }) {
 			}
 			--seconds
 
-			console.log('Minutes: ' + minutes)
-			console.log('Seconds: ' + seconds)
 			updateDisplay(minutes, seconds)
 			countdown()
 		}, 1000)
