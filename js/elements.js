@@ -11,6 +11,16 @@ const rainCard = document.querySelector('.rain')
 const fireCard = document.querySelector('.fire')
 const coffeeCard = document.querySelector('.coffee-shop')
 
+const forestButton = forestCard.querySelector('.cardButton')
+const rainButton = rainCard.querySelector('.cardButton')
+const fireButton = fireCard.querySelector('.cardButton')
+const coffeeButton = coffeeCard.querySelector('.cardButton')
+
+const forestVolume = forestCard.querySelector('input')
+const rainVolume = rainCard.querySelector('input')
+const fireVolume = fireCard.querySelector('input')
+const coffeeVolume = coffeeCard.querySelector('input')
+
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
 
@@ -26,6 +36,14 @@ export {
 	rainCard,
 	fireCard,
 	coffeeCard,
+	forestButton,
+	rainButton,
+	fireButton,
+	coffeeButton,
+	forestVolume,
+	rainVolume,
+	fireVolume,
+	coffeeVolume,
 	minutesDisplay,
 	secondsDisplay
 }
