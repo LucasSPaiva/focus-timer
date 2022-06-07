@@ -4,13 +4,15 @@ import {
 	buttonStop,
 	buttonPlus,
 	buttonMinus,
+	buttonLightTheme,
+	buttonDarkTheme,
 	forestCard,
 	rainCard,
 	fireCard,
 	coffeeCard
 } from './elements.js'
 
-export default function ({ timer, controls, sounds }) {
+export default function ({ timer, controls, sounds, theme }) {
 	buttonPlay.addEventListener('click', function () {
 		controls.play()
 		timer.countdown()
@@ -55,5 +57,13 @@ export default function ({ timer, controls, sounds }) {
 	coffeeCard.addEventListener('click', function () {
 		controls.toggle(coffeeCard)
 		sounds.playAudio(sounds.coffeeAudio, coffeeCard)
+	})
+
+	buttonLightTheme.addEventListener('click', function () {
+		theme.toggle(buttonLightTheme, buttonDarkTheme)
+	})
+
+	buttonDarkTheme.addEventListener('click', function () {
+		theme.toggle(buttonDarkTheme, buttonLightTheme)
 	})
 }

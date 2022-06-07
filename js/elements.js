@@ -3,6 +3,8 @@ const buttonPause = document.querySelector('.buttonPause')
 const buttonStop = document.querySelector('.buttonStop')
 const buttonPlus = document.querySelector('.buttonPlus')
 const buttonMinus = document.querySelector('.buttonMinus')
+const buttonLightTheme = document.querySelector('.lightTheme')
+const buttonDarkTheme = document.querySelector('.darkTheme')
 
 const forestCard = document.querySelector('.forest')
 const rainCard = document.querySelector('.rain')
@@ -18,6 +20,8 @@ export {
 	buttonStop,
 	buttonPlus,
 	buttonMinus,
+	buttonLightTheme,
+	buttonDarkTheme,
 	forestCard,
 	rainCard,
 	fireCard,

@@ -5,13 +5,29 @@
 }
 
 :root {
-	--hue: 240;
-	--primary-color: hsl(var(--hue), 6%, 21%);
-	--secondary-color: hsl(0, 0%, 90%);
-	--primary-color-background: hsl(var(--hue), 9%, 89%);
-	--secondary-color-background: hsl(calc(var(--hue) - 46), 97%, 31%);
-
 	font-size: 62.5%;
+}
+
+.theme-light {
+	--number-color: #323239;
+	--svg-path-color: #323238;
+	--svg-path-active-color: #ffffff;
+	--bg-primary-color: #e6e6e6;
+	--bg-secondary-color: #e0e0e5;
+	--button-active-color: #02789c;
+	--cs-primary: #32325d40;
+	--cs-secondary: #0000004d;
+}
+
+.theme-dark {
+	--number-color: #ffffff;
+	--svg-path-color: #c4c4cc;
+	--svg-path-active-color: #ffffff;
+	--bg-primary-color: #121214;
+	--bg-secondary-color: #29292e;
+	--button-active-color: #0a3442;
+	--cs-primary: #02789c10;
+	--cs-secondary: #4b5c6157;
 }
 
 *::selection {
@@ -27,6 +43,10 @@ button {
 
 button.hide {
 	display: none;
+}
+
+body {
+	background-color: var(--bg-primary-color);
 }
 
 main {
@@ -52,8 +72,7 @@ main {
 	font-family: 'Roboto', sans-serif;
 	line-height: 16rem;
 	font-size: 12rem;
-	color: var(--primary-color);
-
+	color: var(--number-color);
 	cursor: default;
 }
 
@@ -61,6 +80,10 @@ main {
 	display: flex;
 	justify-content: center;
 	gap: 4rem;
+}
+
+.timer .buttons svg path {
+	fill: var(--svg-path-color);
 }
 
 .cards {
@@ -74,27 +97,39 @@ main {
 	height: 14rem;
 	display: flex;
 	justify-content: center;
-
 	border-radius: 2.4rem;
-	background-color: var(--primary-color-background);
-
+	background-color: var(--bg-secondary-color);
 	cursor: pointer;
-	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	box-shadow: var(--cs-primary) 0px 3px 6px, var(--cs-secondary) 0px 3px 6px;
 }
 
 .cards .card.active {
-	background-color: var(--secondary-color-background);
-	box-shadow: hsla(var(--hue), 30%, 28%, 0.25) 0px 30px 60px -12px inset,
-		rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+	background-color: var(--button-active-color);
+	box-shadow: var(--cs-primary) 0px 30px 60px -12px inset,
+		var(--cs-secondary) 0px 18px 36px -18px inset;
+}
+.cards .card path {
+	fill: var(--svg-path-color);
 }
 
 .cards .card.active path {
-	fill: var(--secondary-color);
+	fill: var(--svg-path-active-color);
+}
+
+footer .themes {
+	position: absolute;
+	top: 2rem;
+	right: 5rem;
 }
 
 @media (min-width: 850px) {
 	main {
 		flex-direction: row;
 		gap: 10vw;
+	}
+	footer .themes {
+		position: absolute;
+		top: 6.4rem;
+		right: 6.4rem;
 	}
 }
