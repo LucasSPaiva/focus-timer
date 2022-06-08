@@ -15,8 +15,10 @@
 	--bg-primary-color: #e6e6e6;
 	--bg-secondary-color: #e0e0e5;
 	--button-active-color: #02789c;
-	--cs-primary: #32325d40;
-	--cs-secondary: #0000004d;
+	--cs-primary: #b3b3b7;
+	--cs-secondary: #ffffff;
+	--cs-primary-active: #028ab3;
+	--cs-secondary-active: #026685;
 }
 
 .theme-dark {
@@ -26,8 +28,10 @@
 	--bg-primary-color: #121214;
 	--bg-secondary-color: #29292e;
 	--button-active-color: #0a3442;
-	--cs-primary: #02789c10;
-	--cs-secondary: #4b5c6157;
+	--cs-primary: #232327;
+	--cs-secondary: #2f2f35;
+	--cs-primary-active: #0c3c4c;
+	--cs-secondary-active: #092c38;
 }
 
 *::selection {
@@ -109,16 +113,22 @@ main {
 	width: 13rem;
 	height: 14rem;
 	border-radius: 2.4rem;
-	background-color: var(--bg-secondary-color);
 	cursor: pointer;
-	box-shadow: var(--cs-primary) 0px 3px 6px, var(--cs-secondary) 0px 3px 6px;
+	background: var(--bg-secondary-color);
+	box-shadow: 7px 7px 14px var(--cs-primary), -7px -7px 14px var(--cs-secondary);
+}
+
+.theme-dark .cards .card button {
+	background: #121214;
+	box-shadow: 6px 6px 12px #0c0c0d, -6px -6px 12px #18181b;
 }
 
 .cards .card.active button {
-	background-color: var(--button-active-color);
-	box-shadow: var(--cs-primary) 0px 30px 60px -12px inset,
-		var(--cs-secondary) 0px 18px 36px -18px inset;
+	background: var(--button-active-color);
+	box-shadow: inset 10px 10px 20px var(--cs-secondary-active),
+		inset -10px -10px 20px var(--cs-primary-active);
 }
+
 .cards .card path {
 	fill: var(--svg-path-color);
 }
