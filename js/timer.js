@@ -1,3 +1,6 @@
+import Sounds from './sounds.js'
+let { timeEnd } = Sounds()
+
 export function Timer({ minutesDisplay, secondsDisplay, resetControls }) {
 	let timerTimeOut
 	let minutes = Number(minutesDisplay.textContent)
@@ -18,6 +21,7 @@ export function Timer({ minutesDisplay, secondsDisplay, resetControls }) {
 			updateDisplay(minutes, 0)
 
 			if (isFinished) {
+				timeEnd()
 				resetControls()
 				updateDisplay()
 				return

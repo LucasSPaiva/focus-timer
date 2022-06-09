@@ -22,26 +22,32 @@ import {
 
 export default function ({ timer, controls, sounds, theme }) {
 	buttonPlay.addEventListener('click', function () {
+		sounds.pressButton(sounds.buttonPressAudio)
 		controls.play()
 		timer.countdown()
-		sounds.pressButton()
 	})
 
 	buttonPause.addEventListener('click', function () {
+		sounds.pressButton(sounds.buttonPressAudio)
 		controls.pause()
 		timer.hold()
-		sounds.pressButton()
 	})
 
 	buttonStop.addEventListener('click', function () {
+		sounds.pressButton(sounds.buttonPressAudio)
 		controls.pause()
 		timer.reset()
-		sounds.pressButton()
 	})
 
-	buttonPlus.addEventListener('click', timer.plus)
+	buttonPlus.addEventListener('click', function () {
+		sounds.pressButton(sounds.buttonPressAudio)
+		timer.plus()
+	})
 
-	buttonMinus.addEventListener('click', timer.minus)
+	buttonMinus.addEventListener('click', function () {
+		sounds.pressButton(sounds.buttonPressAudio)
+		timer.minus()
+	})
 
 	forestButton.addEventListener('click', function () {
 		controls.toggle(forestCard)
