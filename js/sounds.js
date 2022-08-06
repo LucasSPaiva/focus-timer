@@ -10,8 +10,8 @@ export default function () {
 	const rainAudio = new Audio('../audio/rain.wav')
 	const fireAudio = new Audio('../audio/fire.wav')
 
-	buttonPressAudio.volume = 0.02
-	kitchenTimerAudio.volume = 0.05
+	buttonPressAudio.volume = 0.35
+	kitchenTimerAudio.volume = 0.35
 
 	function pressButton(button) {
 		button.play()
