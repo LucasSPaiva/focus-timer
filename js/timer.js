@@ -40,7 +40,7 @@ export function Timer({ minutesDisplay, secondsDisplay, resetControls }) {
 
 	function plus() {
 		updateDisplay(
-			Number(minutesDisplay.textContent) + 5,
+			Number(minutesDisplay.textContent) + 1,
 			Number(secondsDisplay.textContent)
 		)
 	}
@@ -49,8 +49,8 @@ export function Timer({ minutesDisplay, secondsDisplay, resetControls }) {
 		let minutes = Number(minutesDisplay.textContent)
 		let seconds = Number(secondsDisplay.textContent)
 
-		if (minutes > 5) {
-			updateDisplay(minutes - 5, seconds)
+		if (minutes > 1) {
+			updateDisplay(minutes - 1, seconds)
 		} else {
 			updateDisplay(0, seconds)
 		}
